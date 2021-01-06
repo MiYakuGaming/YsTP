@@ -1,0 +1,2026 @@
+﻿//==============================
+//Ys Translation Project
+//By NijigenBoukensha
+//2020-2021
+//==============================
+
+//Game Specs
+//Platform: NES
+//Header Size: $10
+//Dialogue Location: File - $30600, NES Memory - $8000
+//Pointer Table: File - $3002C
+//Pointer Type: 16 bit
+
+//Tables
+#VAR(MTETable, TABLE)
+#ADDTBL("MTEText.tbl", MTETable)
+#VAR(EPTable, TABLE)
+#ADDTBL("Epilogue.tbl", EPTable)
+#VAR(SRTable, TABLE)
+#ADDTBL("StaffRoll2.tbl", SRTable)
+#ACTIVETBL(MTETable)
+
+//Pointer type
+#VAR(MyPointer, CUSTOMPOINTER)
+#CREATEPTR(MyPointer, "LINEAR", $-7FF0, 16)
+
+//Pointer table
+#VAR(MyPointerTable, POINTERTABLE)
+#PTRTBL(MyPointerTable, $3002C, 2, MyPointer)
+
+//NES header
+#HDR($8010)
+
+//Jump to text offset
+#JMP($3068A, $31499)
+
+#W16($3002C)
+#W16($3002E)
+¿Has visto a un sujeto@
+tuerto por aquí? Se llama>
+Donis.>
+Ese haragán jamás viene a@
+trabajar…<END>
+
+//MTE test
+//<$05><$06><$07><$08><$09><END>
+//<$0A><$0B><$0C><$0D><$0E><END>
+//<$0F><$10><$11><$12><$13><END>
+//<$14><$15><$16><$17><$18><END>
+//<$19><$1A><$1B><$1C><$1D><END>
+//<$1E><$1F><$20><$21><$22><END>
+//<$23><$24><$25><$26><$27><END>
+//<$28><$29><$2A><$2B><$2C><END>
+//<$4C><$4D><$4E><$4F><$50><END>
+//<$51><$52><$53><$54><$55><END>
+//<$56><$57><$58><$59><$5A><END>
+//<$5B><$5C><$5D><$5E><$5F><END>
+//<$60><$61><$62><$63><$64><END>
+
+#W16($30030)
+He visto a un forastero de@
+capa negra pasar varias>
+veces por aquí.>
+Su capa emite una luz@
+pálida. Una luz que te hace>
+sentir atemorizado de sólo@
+verla.>
+Tengo un mal presentimiento…<END>
+
+#W16($30032)
+La adivina del pueblo actúa@
+de forma rara últimamente.>
+Habla mucho sobre el fin del
+mundo y esas cosas extrañas.<END>
+
+#W16($30034)
+He visto al dueño de la@
+tienda de intercambios>
+recoger un anillo de zafiro.>
+Es un tipo despreciable al@
+que no le importa vender>
+cosas robadas.<END>
+
+#W16($30036)
+Yo la vi…>
+Hay un hada en la fuente del
+noroeste…<END>
+
+#W16($30038)
+Al noreste de esta ciudad@
+hay una enorme cueva llamada>
+Bagura Badet.>
+Al parecer los ladrones@
+vienen de allí.<END>
+
+#W16($3003A)
+Muchos niños van a jugar al@
+campo recientemente.>
+Sin embargo, ese campo está@
+lleno de monstruos.>
+Me preocupa mucho lo que@
+pueda ocurrirles…<END>
+
+#W16($3003C)
+Mi padre es el jefe de@
+Zepik, un aldea del este.>
+Algo parece preocuparle@
+mucho recientemente.>
+Por favor ayúdalo si visitas
+la aldea algún día.<END>
+
+#W16($3003E)
+Desde que la mina de plata@
+del campo fue clausurada,>
+los precios de las cosas no@
+han dejado de subir.>
+Es realmente preocupante…<END>
+
+#W16($30040)
+He oído que el tesoro que@
+los ladrones robaron del>
+templo se encuentra en su@
+escondite.<END>
+
+#W16($30042)
+En el campo hay un gran@
+árbol llamado Roda.>
+Nosotros siempre jugamos@
+allí.<END>
+
+#W16($30044)
+Deberías evitar ir a las@
+minas abandonadas del campo>
+hasta volverte más fuerte.>
+Mi hermano mayor se lastimó@
+seriamente allí.<END>
+
+#W16($30046)
+La muchacha adivina está@
+buscando un guerrero.>
+Tú lo eres, ¿verdad?@
+¿Qué tal si vas a verla?<END>
+
+#W16($30048)
+Según nos contó el abuelo,@
+una brillante espada>
+plateada yace oculta en@
+algún lugar de este país.<END>
+
+#W16($3004A)
+El otro día encontré un@
+escudo muy raro, pero luego>
+vino un sujeto con una capa@
+extraña y me lo quitó.>
+¡Por favor tráemelo de@
+vuelta!<END>
+
+#W16($3004C)
+Nuestro amigo ladrón, Dogi,@
+desapareció en la torre de>
+Darhm hace un tiempo.>
+Aunque ya no esté entre@
+nosotros me gustaría al>
+menos dejarle unas flores.>
+Es una de las cosas que más@
+lamento.<END>
+
+#W16($3004E)
+He oído sobre los libros de@
+Ys hace tiempo.>
+Según ellos, una diosa salvó
+a este país del desastre.>
+Si esa diosa existiera, no@
+tendríamos que vivir>
+temiendo a los monstruos…<END>
+
+#W16($30050)
+Todos desprecian a los@
+ladrones, pero en realidad>
+ellos saben muchas cosas.>
+Siempre puedes recurrir a@
+ellos para preguntar sobre>
+lo que no sepas.<END>
+
+#W16($30052)
+Ayer vi a un sujeto@
+sospechoso.>
+Tenía un escudo con una@
+forma muy extraña.>
+Luego se fue corriendo hacia
+la montaña.<END>
+
+#W16($30054)
+Hace tiempo, cuando@
+trabajaba en las minas,>
+vi una extraña placa bajo la
+tierra.<END>
+
+#W16($30056)
+Esta mañana al despertar no@
+pude ver a Ruta, el poeta,>
+por ninguna parte.>
+Ruta sufre de sonambulismo.@
+¿Adónde se habrá metido…?<END>
+
+#W16($30058)
+He oído una extraña voz al@
+caminar por el campo vecino.>
+Quizás no me siento bien…<END>
+
+#W16($3005A)
+Dicen que la campana de@
+plata fue robada de la casa>
+jefe.>
+Me pregunto si será cierto…@
+¿Tú sabes algo?<END>
+
+#W16($3005C)
+El escondite de los ladrones
+se encuentra junto a la>
+torre de Darhm.>
+Como muchos monstruos viven@
+dentro de ella, los ladrones>
+han sellado la entrada.<END>
+
+#W16($3005E)
+Los demonios han aparecido@
+hasta en nuestra aldea.>
+Cómo desearía que hubiera@
+alguien para protegernos.<END>
+
+#W16($30060)
+¿Conoces el lenguaje de las@
+plantas? Mi nombre es Roda.>
+Una espada resplandeciente@
+se encuentra enterrada bajo>
+mi hermano menor.>
+Fue sepultada en la antigua@
+época de Ys.<END>
+
+#W16($30062)
+#W16($30064)
+#W16($30066)
+#W16($30068)
+Viniste a rescatarme,@
+¿cierto?>
+Me cuesta creer que@
+finalmente seré libre…>
+Mi nombre es Feena.>
+He estado encerrada aquí@
+desde hace mucho tiempo.>
+
+#W16($3006A)
+Hablaremos sobre eso luego.@
+Tú escapa mientras yo>
+distraigo a los monstruos.>
+Bastará con que huyas hasta@
+Zepik, al pie de la montaña.>
+Hasta luego…<END>
+
+#W16($3006C)
+#W16($3006E)
+#W16($30070)
+#W16($30072)
+#W16($30074)
+Una luz plateada emerge@
+desde las raíces del árbol.>
+(Music)
+Obtienes la Espada de Plata.<END>
+
+#W16($30076)
+Cuando volvió en sí, Adol se
+encontraba en una celda.>
+Al revisar su equipaje,@
+soltó un grito de sorpresa.>
+Faltaban varios objetos en@
+él.<END>
+
+#W16($30078)
+Vine a rescatarte, muchacho.
+Me llamo Dogi.>
+Nunca se sabe qué puede@
+pasar aquí.>
+Debes estar siempre alerta.>
+
+#W16($3007A)
+Hay un anciano en esta torre
+llamado Rahba.>
+Para empezar, ve con él para
+que te cuente más sobre la>
+torre.>
+Por cierto, llévale esta@
+estatua cuando lo hagas.>
+La extravió y no deja de@
+preocuparse por ella.>
+Tú, el que está parado ahí@
+atrás. Apresúrate y vete.>
+(Music)
+    Obtienes la Estatua.<END>
+
+#W16($3007C)
+¡Dame un respiro!@ Este muro
+es muy difícil de romper.<END>
+
+#W16($3007E)
+Jamás te había visto por@
+aquí.>
+Lo siento, pero no tengo@
+tiempo para hablar contigo.>
+Estoy en problemas sin mi@
+preciada estatua.<END>
+
+#W16($30080)
+¿No es esa mi estatua?@
+Gracias por devolvérmela.>
+Si vas a recorrer la torre,@
+lleva este collar contigo.>
+Te protegerá de la energía@
+maligna.>
+Mi nombre es Rabah, no lo@
+olvides.>
+(Music)
+  Obtienes el Collar Azul.<END>
+
+#W16($30082)
+Los demonios me encerraron@
+aquí.>
+La melodía demoníaca que@
+recorre este pasillo suena>
+de acuerdo a cómo sopla el@
+viento.>
+Al parecer hay un tubo de@
+ventilación en este piso por>
+el que el viento pasa.>
+Podría salir si tan sólo@
+fuera capaz de destruirlo.<END>
+
+#W16($30084)
+Muchas gracias por@
+liberarme.>
+Tres pisos más arriba se@
+encuentra un pasillo que>
+conecta con la torre de@
+Rad.>
+Una chica estaba siendo@
+llevada hacia allí.>
+La torre de Rad está@
+poseída por una fuerte>
+maldición, por lo que sólo@
+personas malignas pueden>
+entrar en ella.>
+No hay nada que yo pueda@
+hacer al respecto.>
+¿Podrías ir a rescatarla@
+tú?<END>
+
+#W16($30086)
+Volvemos a encontrarnos,@
+¿eh? Soy yo, Dogi.>
+Un bastón muy parecido a ese
+cristal que llevas se>
+encuentra en algún lugar de@
+esta torre.>
+Al parecer no puedes avanzar
+hacia el interior sin él.>
+Eso es lo que me contó la@
+anciana, Jevah Toba.<END>
+
+#W16($30088)
+Mi nombre es Ruta Jemma.@
+Cuando recuperé la>
+conciencia me encontraba@
+dentro de la torre.>
+Vi a un anciano pasar por@
+el pasillo de las estatuas,>
+pero desapareció a través de
+un muro justo frente a mí.>
+Fue entonces cuando me@
+capturaron.<END>
+
+#W16($3008A)
+No hables demasiado, o las@
+heridas te dolerán más…>
+Deberías marcharte ahora@
+mientras no vienen los>
+demonios.>
+Si te demoras mucho esa@
+chica será asesinada.<END>
+
+#W16($3008C)
+#W16($3008E)
+#W16($30090)
+¿Por qué tienes el capítulo@
+perdido de Jemma?>
+Lo escribieron mis@
+ancestros.>
+Hace tiempo, mi padre me@
+contó que en los libros de>
+Ys está escrita la clave@
+para resolver el misterio de>
+los demonios.>
+Dicha clave podría devolver@
+la paz a este país.>
+
+#W16($30092)
+Este es un amuleto que ha@
+pasado por generaciones en>
+mi familia.>
+Sabrás protegerlo bien,@
+¿verdad?>
+Los demonios han dañado mis@
+piernas.>
+No creo poder volver a@
+caminar.>
+Por favor sigue adelante sin
+mí.>
+(Music)
+Obtienes el Amuleto Azul.<END>
+
+#W16($30094)
+Vamos, vete antes de que@
+vuelvan los demonios.<END>
+
+//$30096 Moved
+
+#W16($30098)
+A pesar de ser tan@
+aterradora, esta torre me>
+parece realmente nostálgica.>
+Hay algo que debo hacer@
+ahora. Por favor sigue>
+adelante sin preocuparte@
+por mí.<END>
+
+#W16($300EE)
+   Obtienes la Campana de@
+          Plata.<END>
+
+//Moved to bank 2
+
+#W16($300F2)
+  Obtienes la Armónica de
+          Plata.<END>
+#W16($300E8)
+    Obtienes la Llave de@
+          Marfil.<END>
+
+//Jump to the end of the bank [last straw!]
+#JMP($33FB2, $3400F)
+
+#W16($300EC)
+    Obtienes la Llave de@
+          Darhm.<END>
+#W16($300FA)
+Obtienes el Amuleto Azul.<END>
+#W16($300FE)
+Un intenso poder te empuja@
+hacia atrás.<END>
+#W16($30100)
+(Music)
+Obtienes el Espejo de Fact.<END>
+#W16($30102)
+(Music)
+  Obtienes el Libro de Ys.<END>
+#W16($30104)
+     Obtienes las Alas.<END>
+
+//Jump to 2nd half of the bank
+#JMP($3156A, $3350E)
+
+#W16($300EA)
+    Obtienes la Llave de@
+          Mármol.<END>
+
+#W16($300F0)
+Obtienes la Semilla de Roda.<END>
+
+#W16($3009A)
+Al tocar la puerta, un agudo
+dolor atraviesa tu cuerpo.>
+Al parecer esta puerta está@
+sellada con un gran poder.<END>
+
+#W16($3009C)
+Soy yo, Ruta.@
+El anciano Rahba me acaba>
+de contar algo.>
+Una chica fue traída aquí a@
+la torre de Darhm.>
+La asesinarán si no hacemos@
+algo al respecto.>
+Por favor ve a rescatarla.<END>
+
+#W16($3009E)
+Mi nombre es Rea. Soy una@
+poeta.>
+Quien me encerró aquí fue@
+Dark Fact, un hombre de capa>
+negra.>
+Su objetivo es apoderarse@
+del país usando el poder de>
+los demonios.>
+Por favor, derrótalo a como@
+dé lugar.>
+Su capa está fabricada con@
+un extraño material.>
+//¿Y tú como lo sabes...?
+Sólo una espada hecha de@
+metal de Cleria puede>
+hacerle daño.<END>
+
+#W16($300A0)
+Por favor escapa tú primero.
+Yo no soy una guerrera al>
+igual que tú, por lo que@
+escaparé ocultándome de>
+los demonios.<END>
+
+#W16($300A2)
+Parece que es una puerta de@
+una sola dirección.>
+No se abrirá sin importar@
+cuánto empujes.<END>
+
+#W16($300A4)
+Buen trabajo al reunir los@
+libros.>
+Sin embargo, mis planes@
+volverían al punto de>
+partida si los secretos que@
+ocultan los libros fueran>
+revelados.>
+Tu muerte servirá para que@
+el nombre de Dark Fact>
+perdure en la historia.>
+
+#W16($300A6)
+Te contaré algo interesante@
+antes de enviarte al Hades.>
+La chica que rescataste del@
+templo es la diosa de Ys de>
+la que habla el capítulo de@
+Jemma.>
+Ella estuvo durmiendo bajo@
+tierra durante cientos de>
+años con el fin de sellar a@
+los demonios.>
+
+#W16($300A8)
+Yo la desperté para liberar@
+ese sello.>
+Al parecer sus recuerdos de@
+la época de Ys se perdieron.>
+Una vez que acabe contigo,@
+convertiré a esa chica en>
+mi sirvienta personal.>
+En fin, comencemos de una@
+vez.<END>
+
+#W16($300AA)
+Adol encuentra el último@
+capítulo del libro en la>
+capa.<END>
+
+#W16($300AC)
+Al reunir los libros, una@
+resplandeciente luz emerge.>
+Adol es rodeado por una@
+suave tranquilidad.<END>
+
+#W16($300AE)
+Obtienes la Espada de Plata.<END>
+
+#W16($300B0)
+Obtienes la Espada de Fuego.<END>
+
+#W16($300B2)
+Obtienes el Escudo de Plata.<END>
+
+#W16($300B4)
+    Obtienes el Escudo de@
+          Batalla.<END>
+
+#W16($300B6)
+   Obtienes la Armadura de@
+           Plata.<END>
+
+#W16($300B8)
+   Obtienes la Armadura de@
+         Batalla.<END>
+
+#W16($300BA)
+    Obtienes una Poción.<END>
+
+#W16($300BC)
+  Obtienes el Collar Azul.<END>
+  
+#W16($300BE)
+    Obtienes la Máscara@
+          Ocular.<END>
+
+#W16($300C0)
+    Obtienes el Martillo.<END>
+
+#W16($300C2)
+  Obtienes el Anillo de la
+           Fuerza.<END>
+
+#W16($300C4)
+     Obtienes el Anillo@
+         Protector.<END>
+
+#W16($300C6)
+   Obtienes el Anillo del@
+          Tiempo.<END>
+
+#W16($300C8)
+   Obtienes el Anillo de@
+         Curación.<END>
+
+#W16($300CA)
+     Obtienes el Anillo@
+         Maligno.<END>
+
+#W16($300CC)
+#W16($300CE)
+#W16($300D0)
+#W16($300D2)
+#W16($300D4)
+#W16($300D6)
+  Obtienes el Libro de Ys.<END>
+
+#W16($300D8)
+     Obtienes un Rubí.<END>
+
+#W16($300DA)
+    Obtienes un Collar.<END>
+
+#W16($300DC)
+#W16($300DE)
+   Obtienes el Anillo de@
+          Zafiro.<END>
+
+#W16($300E0)
+    Obtienes el Cristal.<END>
+
+#W16($300E2)
+    Obtienes la Llave del@
+           Templo.<END>
+
+#W16($300E4)
+   Obtienes la Llave para@
+          Cofres.<END>
+
+#W16($300E6)
+   Obtienes la Llave de la@
+           Celda.<END>
+
+#W16($300F4)
+#W16($300F6)
+    Obtienes el Bastón.<END>
+
+//Moved to the first bank
+//#W16($300E8)
+//    Obtienes la Llave de@
+//          Marfil.<END>
+//#W16($300EA)
+//    Obtienes la Llave de@
+//          Mármol.<END>
+//#W16($300EC)
+//    Obtienes la Llave de@
+//          Darhm.<END>
+//#W16($300EE)
+//Obtienes la Campana de Oro.<END>
+//#W16($300F0)
+//Obtienes la Semilla de Roda.<END>
+//#W16($300F2)
+//  Obtienes la Armónica de
+//          Plata.<END>
+//#W16($300F4)
+//#W16($300F6)
+//    Obtienes el Bastón.<END>
+//#W16($300F8)
+//    Obtienes los Lentes.<END>
+//#W16($300FA)
+//  Obtienes el Collar Azul.<END>
+
+#W16($300FC)
+¿Fuiste tú quien derrotó a@
+mi clon…?>
+No puedo dejarte con vida@
+ahora que conoces los>
+secretos de Ys.>
+Yo, Dark Fact, te enfrentaré
+cara a cara.>
+¡No creas que esta batalla@
+será como la anterior!<END>
+
+//#W16($300FE)
+//Un intenso poder te empuja@
+//hacia atrás.<END>
+
+//#W16($30100)
+//(Music)
+//Obtienes el Espejo de Fact.<END>
+
+//#W16($30102)
+//(Music)
+//  Obtienes el Libro de Ys.<END>
+
+//#W16($30104)
+//     Obtienes las Alas.<END>
+
+#W16($30106)
+Una extraña luz se@
+desprende.<END>
+
+#W16($30108)
+Oyes una espeluznante risa@
+viniendo desde alguna parte.<END>
+
+#W16($3010A)
+¡Gran trabajo! Todos te@
+estamos muy agradecidos.>
+Por favor ve con la abuela@
+Jevah que está esperándote.<END>
+
+#W16($3010C)
+#W16($3010E)
+    Al parecer nadie se@
+     encuentra en casa.<END>
+
+#W16($30110)
+   Sientes una presencia@
+        maligna.<END>
+
+#W16($30112)
+    El cofre está vacío.<END>
+
+#W16($30114)
+     Cerrado con llave.<END>
+
+#W16($30116)
+(Music)
+   Obtienes el bastón de@
+          Sarana.<END>
+
+#W16($30118)
+Mi nombre es Frea. Yo@
+protejo el lago de la vida.>
+Hace tiempo el bastón de@
+Sarana permitía controlar el>
+agua a voluntad, pero fue@
+robado.>
+Se rumora que está escondido
+en algún lugar de la ciudad…<END>
+
+#W16($3011A)
+Hmm… Así que fuiste a ver a@
+Lady Frea…>
+Sí… Creo que puedo@
+ayudarte…>
+(Music2)
+¡Despierta, bastón!>
+En fin, que te vaya bien…<END>
+
+#W16($3011C)
+Oyes una voz viniendo de@
+algún lugar.>
+¡Oh, héroe! He estado@
+esperando por tanto tiempo>
+que hasta las piedras se han
+convertido en arena.>
+Debe haber algo en la mina@
+abandonada que sólo tú>
+puedes hacer.>
+Yo ya no tengo fuerzas para@
+enfrentar a los demonios.>
+Liberar el sello es lo@
+máximo que puedo hacer.>
+El sello estará liberado@
+para cuando llegues a la>
+mina.<END>
+
+#W16($3011E)
+Hay algo grabado en lengua@
+sagrada en el muro.>
+Pasa por la puerta podrida,@
+luego por la puerta de la>
+mano que protege, luego por@
+la puerta de la mano que>
+ataca.<END>
+
+#W16($30120)
+Adelante, pasa.<END>
+
+#W16($30122)
+#W16($30124)
+#W16($30126)
+#W16($30128)
+#W16($3012A)
+Gracias por encontrar el@
+bastón de Sarana.>
+Todo se pondrá más difícil a
+partir de ahora, pero está>
+en ti superarlo.>
+Para esos momentos, lleva el
+Bastón de Sarana y la Flauta>
+del Resplandor.>
+//¡¿Cómo rayos duerme un bastón?!
+Debo decirte que el bastón@
+ha estado dormido durante>
+mucho tiempo.>
+Debes buscar un lugar@
+rodeado de árboles.>
+Cuando lo hagas, la Flauta@
+del resplandor te mostrará>
+el camino.>
+(Music)
+   Obtienes la Flauta del@
+        Resplandor.<END>
+
+//Shop text
+#W16($3149A)
+#W16($3149C)
+   Sarah, la@
+    adivina@
+Tú eres justo a
+quien buscaba.@
+Por favor@
+prepárate y@
+regresa aquí.@
+Tengo algo que@
+encargarte.<END>
+
+#W16($3149E)
+   Sarah, la@
+    adivina@
+¿Me ayudarás?@
+Muchas gracias.
+¿Sabes acerca@
+de los libros@
+de Ys?@
+Sí.@
+No.<END>
+
+#W16($314A0)
+El cristal@
+indica que se@
+encuentran en@
+en el templo de
+la montaña.>
+¿Podrías ir a@
+buscarlos?@
+Sí.@
+No.<END>
+
+#W16($314A2)
+¿De verdad? Te@
+lo agradezco.@
+(Music)
+Por favor lleva
+este cristal@
+contigo.@
+Te servirá de@
+guía en tu@
+viaje.<END>
+
+#W16($314A4)
+Ya veo.@
+Realmente creí@
+que tú eras el@
+indicado.@
+Qué lástima.<END>
+
+#W16($314A6)
+Los 6 libros de
+Ys contienen la
+historia de ese
+antiguo país.@
+Sin embargo,@
+esos libros@
+desaparecieron@
+cuando Ys@
+pereció.<END>
+
+#W16($314A8)
+Terribles@
+calamidades@
+sucederán si@
+no reunimos los
+libros pronto.>
+Por el momento@
+ve a ver a mi@
+tía, en la@
+aldea de Zepik.<END>
+
+#W16($314AA)
+Usted es Adol,@
+¿verdad?@
+Lo lamento,@
+pero Sarah fue@
+asesinada.@
+Pobrecilla…<END>
+
+#W16($314AC)
+Por favor tome@
+este libro.@
+(Music)
+Sarah me lo dio
+por si algo le@
+ocurría.@
+Dijo algo sobre
+una mina antes@
+de respirar su@
+último aliento.<END>
+
+#W16($314AE)
+La tienda no@
+puede continuar
+sin Sarah.@
+Usted tampoco@
+tiene ya nada@
+por qué venir,@
+¿verdad?<END>
+
+#W16($314B0)
+   Pim, el@
+   mercader@
+ ¿Qué quieres?@
+ Salir@
+ Vine a vender@
+ algo.@
+ Vine a comprar
+ algo.<END>
+
+#W16($314B2)
+     ¿Qué@
+   comprarás?@
+ Salir@
+ Anillo de@
+ zafiro@
+ Alas@
+ Espejo@
+ Armadura de@
+ plata<END>
+ 
+#W16($314B4)
+¿Qué tal si le@
+regalas este@
+zafiro a tu@
+novia?@
+¡Te lo dejaré@
+barato!>
+Sólo 1000 gil.@
+¿Qué dices?@
+Mejor no.@
+Está bien.<END>
+
+#W16($314B6)
+¿No compraste@
+eso recién?@
+Ya no me quedan
+más.<END>
+
+#W16($314B8)
+Con estas alas@
+podrás regresar
+a esta ciudad@
+desde cualquier
+lugar en un@
+santiamén, sin@
+importar cuán@
+lejos estés.>
+Cuesta 200O@
+gil.@
+Un poco caro,@
+lo sé.@
+¿Qué harás?@
+No lo compraré.
+Lo compraré.<END>
+
+#W16($314BA)
+Lo siento, pero
+ya lo vendí.<END>
+
+#W16($314BC)
+Justo acabo de@
+venderlo.@
+¿Que quién lo@
+compró?@
+Si mal no@
+recuerdo, un@
+hombre de capa@
+negra.>
+Su capa@
+brillaba con@
+una luz pálida,
+y se veía muy@
+sospechoso…<END>
+
+#W16($314BE)
+Si tienes uno@
+de estos ítems,
+los aceptaré:@
+ Regresar@
+ Rubí@
+ Collar<END>
+
+#W16($314C0)
+Vaya, es@
+hermoso.@
+¿Puedes@
+vendérmelo?@
+Te ofreceré un@
+buen precio.>
+1200 gil. ¿Qué@
+dices?@
+Mejor no.@
+Está bien.<END>
+
+#W16($314C2)
+Es un collar@
+bastante ajado.
+No creo poder@
+venderlo ni@
+como gema.@
+Te doy 5OO por@
+él.@
+Mejor no.@
+Está bien.<END>
+
+#W16($314C4)
+#W16($314C6)
+Ya tienes ese@
+ítem, ¿o no?<END>
+
+#W16($314C8)
+ Taberna de@
+    Ohman@
+ Salir@
+ Hablar con:@
+ Ohman@
+ Hombre@
+ musculoso@
+ Hombre@
+ tuerto<END>
+
+#W16($314CA)
+Recientemente,@
+una banda de@
+ladrones asalta
+nuestra ciudad@
+sin que podamos
+hacer nada.>
+Pero aún así,@
+debemos hacer@
+algo al@
+respecto.@
+¿Qué tal si nos
+echas una mano?<END>
+
+#W16($314CC)
+¿Quieres oír@
+mis penas,@
+muchacho?@
+Está bien.@
+No, gracias.<END>
+
+#W16($314CE)
+Mi nombre es@
+Donis.@
+Gasté todos mis
+ahorros para@
+comprarle un@
+anillo de@
+zafiro a mi@
+esposa, pero lo
+he extraviado.>
+No puedo volver
+a casa así…@
+Estoy seguro de
+que esto fue@
+obra de esos@
+ladrones…<END>
+
+#W16($314D0)
+¿Así que ese@
+mercader estaba
+vendiendo el@
+anillo?@
+Ya veo… Gracias
+por traérmelo@
+de vuelta.>
+Aquí tienes una
+pequeña muestra
+de mi aprecio.@
+Son 1500 gil.<END>
+
+#W16($314D2)
+¿No eres tú el@
+niño que me@
+ayudó?@
+Gracias por@
+eso.<END>
+
+#W16($314D4)
+Qué desalmado@
+eres…<END>
+
+#W16($314D6)
+Jamás te había@
+visto por aquí…
+Yo soy Galek.@
+Me contrataron@
+para cazar@
+ladrones.@
+¿Un trago?@
+Seguro.@
+No, qué miedo…<END>
+
+#W16($314D8)
+Se dice que,@
+hace mucho@
+tiempo, hubo@
+semillas de@
+Roda en este@
+país.>
+No sé para qué@
+sirven, pero,@
+según la@
+leyenda, su@
+sabor supera@
+todo lo@
+conocido.>
+Me gustaría@
+probar al menos
+una antes de@
+morir…<END>
+
+#W16($30096)
+#W16($314DA)
+…<END>
+
+#W16($314DC)
+ Clínica de@
+ Clause@
+ ¿Qué ocurre?@
+ Salir@
+ Cura mis@
+ heridas@
+ Quiero comprar
+ medicina<END>
+ 
+#W16($314DE)
+La doctora no@
+se encuentra en
+la clínica en@
+este momento.@
+Si le parece@
+bien, yo lo@
+atenderé en su@
+lugar.>
+Le costará 50@
+gil recuperar@
+10 puntos de@
+energía.@
+¿Qué dice?@
+Está bien.@
+Mejor no.<END>
+
+#W16($314E0)
+Esta medicina@
+consiste en una
+infusión de@
+flores de@
+Jigitalis, la@
+cual sólo crece
+en la cima de@
+las montañas.>
+Es excelente@
+para sanar@
+heridas.@
+Cada botella@
+cuesta 1000@
+gil.@
+¿Qué tal?@
+Mejor no.@
+Está bien.<END>
+
+#W16($314E2)
+¿Quiere comprar
+más?@
+Sí.@
+No.<END>
+
+#W16($314E4)
+Cuídese…<END>
+
+#W16($314E6)
+  Tienda de@
+    armas@
+Mi nombre es@
+Rosetti.@
+ Salir@
+ Espada corta@
+ Espada larga@
+ Talwar<END>
+
+#W16($314E8)
+La espada corta
+es un ítem muy@
+conveniente que
+te servirá de@
+mucho no sólo@
+en tus batallas
+sino también en
+tu día a día.>
+¿Te gustaría@
+adquirirla por@
+500 gil?@
+No.@
+Sí.<END>
+
+#W16($314EA)
+Esta espada@
+larga es mi@
+propia obra@
+maestra.@
+No encontrarás@
+una superior en
+ningún otro@
+lugar.>
+¿Te gustaría@
+adquirirla por@
+2000 gil?@
+No.@
+Sí.<END>
+
+#W16($314EC)
+Esta espada@
+Talwar es uno@
+de los pocos@
+ejemplares que@
+existen.@
+Son fabricadas@
+en un país del@
+lejano este.>
+¿Te gustaría@
+adquirirla por@
+5000 gil?@
+No.@
+Sí.<END>
+
+#W16($314EE)
+Muchas gracias@
+por tu compra.<END>
+
+#W16($314F0)
+  Tienda de@
+  armaduras@
+Me llamo Dios.@
+¿Estás buscando
+una armadura o@
+un escudo?@
+ Salir@
+ Armaduras@
+ Escudos<END>
+ 
+#W16($314F2)
+   Armaduras:@
+ Regresar@
+ Cota de malla@
+ Armadura de@
+ metal@
+ Reflex@
+ Armadura de@
+ plata<END>
+ 
+#W16($314F4)
+La cota de@
+malla te hará@
+sentir fresco y
+ventilado.@
+Son 400 gil.@
+¿La comprarás?@
+No.@
+Sí.<END>
+
+#W16($314F6)
+Las armaduras@
+de plata son@
+pesadas, pero@
+de una solidez@
+insuperable.@
+Son 2000 gil.@
+¿La comprarás?@
+No.@
+Sí.<END>
+
+#W16($314F8)
+Dicen que las@
+Reflex son de@
+las armaduras@
+más livianas.@
+Son 5000 gil.@
+¿La comprarás?@
+No.@
+Sí.<END>
+
+#W16($314FA)
+Lo siento, pero
+ya he vendido@
+esa armadura.@
+¿Que quién la@
+compró?@
+Hmm, no lo@
+recuerdo…<END>
+
+#W16($314FC)
+   Escudos:@
+ Regresar@
+ Escudo pequeño
+ Escudo mediano
+ Escudo grande@
+ Escudo de@
+ plata<END>
+
+#W16($314FE)
+Los escudos@
+pequeños son@
+ideales para@
+principiantes…@
+Son 7OO gil.@
+¿La comprarás?@
+No.@
+Sí.<END>
+
+#W16($31500)
+Los escudos@
+medianos poseen
+una resistencia
+superior al@
+resto.@
+Son 2000 gil.@
+¿La comprarás?@
+No.@
+Sí.<END>
+
+#W16($31502)
+Los escudos@
+grandes son@
+sólidos, pero@
+algo pesados.@
+Son 2000 gil.@
+¿La comprarás?@
+No.@
+Sí.<END>
+
+#W16($31504)
+Un niño@
+travieso se la@
+llevó el otro@
+día.@
+Lo lamento.<END>
+
+#W16($31506)
+Muchas gracias.<END>
+
+#W16($31508)
+ Casa del jefe@
+Viniste en el@
+momento justo,@
+muchacho.@
+¿Mantendrás lo@
+que te contaré@
+en secreto?@
+Sí.@
+No.<END>
+
+#W16($3150A)
+La campana de@
+plata, es decir
+el símbolo de@
+la aldea, ha@
+sido robado por
+los ladrones.>
+Me gustaría que
+lo trajeras de@
+vuelta.@
+¿Podrás@
+hacerlo?@
+Déjemelo a mí.@
+No, no puedo.<END>
+
+#W16($3150C)
+El escondite de
+los ladrones se
+se encuentra al
+norte de la@
+aldea, en la@
+montaña.>
+Te lo encargo@
+mucho.@
+Recuerda no@
+decirle nada@
+sobre esto a@
+los aldeanos…<END>
+
+#W16($3150E)
+Ya veo…@
+Supongo que@
+tendrás tus@
+propias razones
+para actuar.@
+Adiós.<END>
+
+#W16($31510)
+Fui un idiota@
+al pedirle@
+ayuda a un@
+sujeto como@
+tú…<END>
+
+#W16($31512)
+ Casa del jefe@
+¡Oh! ¡Trajiste@
+la campana!@
+¿Dices que no@
+la robaron los@
+ladrones, sino@
+que estaba bajo
+el templo?@
+Hmm, qué raro…<END>
+
+#W16($31514)
+Como sea, debo@
+agradecerte por
+tu ayuda.@
+Por favor@
+acepta este@
+anillo.@
+(Music)
+Son las reglas@
+de nuestra@
+familia.>
+Este anillo@
+aumentará aún@
+más tu fuerza.<END>
+
+#W16($31516)
+ Casa del jefe@
+Tú me ayudaste@
+antes, ¿verdad?
+Por favor@
+descansa aquí@
+para recuperar@
+tus energías…<END>
+
+#W16($31518)
+ Casa de Jevah@
+Jovencito, tú@
+no perteneces@
+aquí.@
+Lo siento, pero
+tendrás que@
+marcharte.<END>
+
+#W16($3151A)
+ Casa de Jevah@
+Este cristal es
+de Sarah…@
+Irás en busca@
+de los libros,@
+¿verdad?@
+(Music)
+En ese caso,@
+toma la llave@
+del templo.<END>
+
+#W16($3151C)
+ Casa de Jevah@
+He oído que hay
+gente buscando@
+matar a Sarah@
+recientemente.@
+Me preocupa…<END>
+
+#W16($3151E)
+ Casa de Jevah@
+La chica que@
+estaba cautiva@
+en el templo@
+está aquí.@
+ Salir@
+ Hablar con:@
+ Jevah@
+ Feena<END>
+ 
+#W16($31520)
+Hace poco una@
+muchacha de la@
+aldea dijo que@
+oyó una extraña
+voz al caminar@
+por el campo.>
+El dueño de la@
+voz es quizás@
+el árbol de@
+Roda.<END>
+
+#W16($31522)
+Se dice que,@
+antiguamente,@
+los humanos@
+podían hablar@
+con las@
+plantas.>
+Quizás puedas@
+encontrar@
+alguna pista@
+si encuentras@
+una forma de@
+comunicarte con
+ellas.<END>
+
+#W16($31524)
+Me alegra que@
+estés bien.@
+Yo me quedaré@
+aquí por un@
+tiempo.<END>
+
+#W16($31526)
+¿Que por qué@
+me encerraron?@
+Me duele la@
+cabeza cada vez
+que trato de@
+recordarlo…<END>
+
+#W16($31528)
+ Casa de Jevah@
+Eso es un libro
+de Ys. Tú no@
+podrías leerlo.
+Vamos, dámelo@
+para que lo@
+lea por ti.@
+Está bien.@
+No.<END>
+
+#W16($3152A)
+Gracias.<END>
+
+#W16($3152C)
+No te alcanza.<END>
+
+#W16($3152E)
+Ya no me@
+quedan.<END>
+
+#W16($31530)
+Muchísimas@
+gracias.<END>
+
+#W16($31532)
+Al parecer no@
+te alcanza el@
+dinero.<END>
+
+#W16($31534)
+Parece que aún@
+no tienes ese@
+capítulo…<END>
+
+#W16($31536)
+Ya no tenemos.<END>
+
+#W16($31538)
+¿Cuál leerás?@
+ Hadal@
+ Jemma@
+ Dabih@
+ Mesa@
+ Toba@
+ Fact<END>
+ 
+#W16($3153A)
+No te alcanza@
+el dinero.<END>
+
+#W16($3153C)
+Ya tienes ese@
+ítem.<END>
+
+#W16($3153E)
+ Escondite de@
+ los ladrones@
+¿Qué estás@
+haciendo aquí,@
+muchachito?@
+Hablar.@
+Qué aterrador.@
+Mejor me voy.<END>
+
+#W16($31540)
+¿Que estamos@
+dañando la@
+ciudad?@
+Nosotros@
+robamos a los@
+ricos, pero@
+jamás a gente@
+común.<END>
+
+#W16($31542)
+Hablando del@
+tema, nosotros@
+también somos@
+víctimas de@
+robos…>
+Para colmo,@
+todo lo que nos
+robaron es de@
+plata.@
+Qué mundo tan@
+descabellado…<END>
+
+#W16($31544)
+     Goban@
+Qué interesante@
+juguete tienes@
+ahí.@
+Encontraste esa
+máscara en el@
+templo,@
+¿verdad?>
+Si te la pones@
+serás capaz de@
+ver puertas@
+invisibles.<END>
+
+#W16($31546)
+#W16($31548)
+Mamá Jevah me@
+lo contó todo.@
+Irás a la torre
+de Darhm a@
+buscar los@
+libros, ¿eh?@
+Ve con cuidado.<END>
+
+#W16($3154A)
+Oye, oye, aún@
+te falta@
+dinero.<END>
+
+#W16($3154C)
+Ya tienes eso.<END>
+
+#W16($3154E)
+  Capítulo de@
+     Hadal.@
+Ys prosperó@
+gracias a la@
+invención del@
+metal llamado@
+Cleria.>
+El templo de@
+Salmon en la@
+montaña se@
+convirtió en@
+símbolo de su@
+prosperidad.<END>
+
+#W16($31550)
+Pero en ese@
+momento, una@
+inesperada@
+catástrofe tuvo
+lugar.<END>
+
+#W16($31552)
+Ese hombre nos@
+asalta con su@
+horda de@
+demonios.>
+Nuestra diosa@
+desapareció@
+justo frente@
+a nosotros@
+mientras la@
+gente tiembla@
+de miedo.>
+Nadie la ha@
+visto desde@
+entonces.<END>
+
+#W16($31554)
+La familia@
+Jemma posee un@
+objeto que ha@
+pasado de@
+generación en@
+generación.@
+Una medalla de@
+metal azul y@
+transparente.<END>
+
+#W16($31556)
+Esta medalla@
+tiene el poder@
+de romper la@
+maldición de@
+los demonios.>
+Nos permitirá@
+así ganar algo@
+de tiempo.<END>
+
+#W16($31558)
+  Capítulo de@
+     Dabih@
+Hablaré sobre@
+la tragedia que
+cayó sobre Ys.>
+Ese hombre@
+apareció de@
+repente y atacó
+la ciudad.>
+Lava comenzó a@
+brotar del@
+suelo y quemar@
+los campos.>
+Sólo nosotros@
+pudimos escapar
+de allí.<END>
+
+#W16($3155A)
+Al parecer@
+Cleria es el@
+origen de toda@
+esta calamidad.
+Lo hemos@
+enterrado en lo
+profundo de la@
+tierra.>
+La catástrofe@
+volverá sólo@
+cuando alguien@
+lo extraiga@
+nuevamente.<END>
+
+#W16($3155C)
+  Capítulo de@
+     Mesa@
+Finalmente@
+hemos sido@
+acorralados en@
+el templo de@
+Salmon.>
+Los grandes@
+demonios traen@
+consigo a sus@
+esbirros para@
+presionarnos@
+poco a poco.<END>
+
+#W16($3155E)
+Hemos decidido@
+abandonar este@
+lugar con la@
+esperanza de@
+regresar algún@
+día…<END>
+
+#W16($31560)
+  Capítulo de@
+     Toba@
+Nuestra gente@
+está consagrada
+a dos diosas y@
+seis obispos.@
+Ambas diosas@
+son el símbolo@
+nacional.<END>
+
+#W16($31562)
+  Capítulo de@
+     Fact@
+En una mañana@
+de radiante@
+amanecer, la@
+persecución de@
+ese hombre de@
+pronto se@
+detuvo.>
+Se desconoce@
+la razón, pero@
+es motivo de@
+mucha alegría,@
+pues aquella@
+tragedia que@
+asaltaba a Ys@
+finalmente ha@
+desaparecido…<END>
+
+#W16($31564)
+En preparación@
+para la segunda
+venida de ese@
+individuo,@
+sellaremos el@
+poder acumulado
+de Ys aquí.>
+Aquel que posea
+los seis libros
+se le otorgará@
+dicho poder,@
+y se convertirá
+en el líder que
+guiará a este@
+mundo hacia la@
+paz.<END>
+
+#W16($31566)
+Oh… Este es el@
+último capítulo
+perdido de Ys.<END>
+
+#W16($31568)
+Con él la paz@
+volverá a@
+nuestro país…<END>
+
+//Epilogue
+//Write line positions
+#JMP($33511)
+<$61><$28>
+#JMP($33515)
+<$A1><$28>
+#JMP($33519)
+<$E1><$28>
+#JMP($3351D)
+<$21><$29>
+#JMP($33521)
+<$61><$29>
+#JMP($33525)
+<$A1><$29>
+#JMP($33529)
+<$E1><$29>
+#JMP($3352D)
+<$21><$2A>
+#JMP($33531)
+<$61><$2A>
+#JMP($33535)
+<$A1><$2A>
+#JMP($33539)
+<$E1><$2A>
+#JMP($3353D)
+<$21><$2B>
+#JMP($33541)
+<$61><$2B>
+#JMP($33545)
+<$A1><$2B>
+#JMP($33549)
+<$21><$20>
+#JMP($3354D)
+<$61><$20>
+#JMP($33551)
+<$A1><$20>
+#JMP($33555)
+<$E1><$20>
+#JMP($33559)
+<$21><$21>
+#JMP($3355D)
+<$61><$21>
+#JMP($33561)
+<$A1><$21>
+#JMP($33565)
+<$E1><$21>
+#JMP($33569)
+<$21><$22>
+#JMP($3356D)
+<$61><$22>
+#JMP($33571)
+<$A1><$22>
+#JMP($33575)
+<$E1><$22>
+
+#JMP($335D0, $337CC)
+#ACTIVETBL(EPTable)
+#W16($3350F)
+<$1D>El sol del amanecer asciende.
+#W16($33513)
+<$1F>El contorno de la torre surge a
+#W16($33517)
+<$1F>medida que el cielo se ilumina.
+#W16($3351B)
+<$1E>Un pájaro comienza a cantar en
+#W16($3351F)
+<$1E>libertad mientras los demonios
+#W16($33523)
+<$1E>desaparecen como polvo. El co-
+#W16($33527)
+<$1D>razón de Adol se llena de sa-
+#W16($3352B)
+<$1D>tisfacción tras haber comple-
+#W16($3352F)
+<$1F>tado su viaje. En tanto, él re-
+#W16($33533)
+<$1D>flexiona acerca de la extensa
+#W16($33537)
+<$1E>historia de Ys. Los eventos de
+#W16($3353B)
+<$1E>sus libros sucedieron uno tras
+#W16($3353F)
+<$1C>otro hasta la llegada de las
+#W16($33543)
+<$1F>diosas. Curiosamente, Adol tie-
+#W16($33547)
+<$1D>ne la sensación de conocerlas
+#W16($3354B)
+<$1F>muy bien. Al mirar hacia abajo,
+#W16($3354F)
+<$1E>él observa la discreta casa de
+#W16($33553)
+<$1E>Jevah. ¿Habrá Feena recuperado
+#W16($33557)
+<$1D>la memoria? Al regresar, Adol
+#W16($3355B)
+<$19>va directo a contarle sus
+#W16($3355F)
+<$1D>aventuras, pero entonces, una
+#W16($33563)
+<$19>radiante luz lo envuelve…
+#W16($33567)
+<$01> 
+#W16($3356B)
+<$01> 
+#W16($3356F)
+<$01> 
+#W16($33573)
+<$1F>Así comienza su nueva aventura…
+
+//Staff roll
+#JMP($9C2C, $A00F)
+#ACTIVETBL(SRTable)
+#HDR($0010)
+#W16($9C10)
+#W16($9C12)
+@
+      Productor Ejecutivo@
+@
+         Satoshi Honda|
+#W16($9C14)
+@
+           Productor@
+@
+        Harunobu Komori|
+#W16($9C16)
+@
+    Programación para Famicom@
+@
+           Mister N@
+           Mister K@
+           Ameochan|
+#W16($9C18)
+@
+      Diseño para Famicom@
+@
+          I. Hasegawa@
+             Marina@
+         Joekun Yagisan@
+            Wachibou|
+#W16($9C1A)
+@
+           Promoción@
+@
+          Kouki Minami@
+         Ryuya Shimoda|
+#W16($9C1C)
+@
+        Consultor Técnico@
+@
+          Hisaki Yokoi|
+#W16($9C1E)
+@
+    Diseño de Portada y Manual@
+@
+         Etsuko Matsuoka@
+           Comix Brand|
+#W16($9C20)
+@
+          Consultores@
+@
+        Toshihiko Marumo@
+          Katsumi Arai@
+        Takeyuki Kasakura|
+#W16($9C22)
+@
+             Debug@
+@
+        Noritoshi Kodama@
+          Hiroshi Takai@
+        Yoshiyuki Inagaki@
+        Hisashi Nishimura|
+#W16($9C24)
+@
+Supervisado por Masaru Yoshioka|
+#W16($9C26)
+@
+Diseño original de Nihon Falcom|
+#W16($9C28)
+@
+Agradecimientos a Masayuki Katoh|
+#W16($9C2A)
+@
+         Producido por@
+ Victor Musical Industries INC|
+
+//Thanks
+#JMP($17D5A, $17DA2)
+Gracias por haber vivido
+ esta aventura y crecer 
+     junto a ella.      
